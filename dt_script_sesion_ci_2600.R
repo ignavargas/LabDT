@@ -1,8 +1,11 @@
 install.packages("rpart")
+install.packages("e1071")
+install.packages("caret")
 library(rpart)
 library(caret)
+library(e1071)
 
-setwd("~/Desktop/ml_bioinfo_i_2019/ejercicio_3/")
+setwd("~/LabDT")
 dir()
 
 letter.rec.data <- read.table("letter-recognition.data",
@@ -29,7 +32,7 @@ cart.conf.mat <- confusionMatrix(letter.model.pred,
 cart.conf.mat
 
 #----------- PPrediction of letters with RFs
-
+install.packages("randomForest")
 library(randomForest)
 set.seed(101)
 rf.letter.rec <- randomForest(letter.rec.data,

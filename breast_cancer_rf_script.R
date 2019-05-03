@@ -1,8 +1,9 @@
+library(ggplot2)
 library(dplyr)
 library(caret)
 library(randomForest)
 
-setwd("~/Desktop/ml_bioinfo_i_2019/ejercicio_3/")
+setwd("~/LabDT")
 dir()
 
 names <- c('id_number', 'diagnosis', 'radius_mean', 
@@ -20,7 +21,7 @@ names <- c('id_number', 'diagnosis', 'radius_mean',
            'concavity_worst', 'concave_points_worst', 
            'symmetry_worst', 'fractal_dimension_worst')
 
-breast_cancer <- read.table("wdbc.data", 
+breast_cancer <- read.table("breast_cancer.data", 
                             sep = ',', 
                             col.names = names)
 
